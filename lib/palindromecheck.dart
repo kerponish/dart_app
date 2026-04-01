@@ -1,21 +1,17 @@
 void main() {
-  check(10);
-  check(22);
-}
+  int num = 12;
+  int orig = num;
+  int ulto = 0;
 
-void check(int num) {
-  int og = num;
-  int reversed = 0;
-
-  while (num != 0) {
+  while (num > 0) {
     int digit = num % 10;
-    reversed = (reversed * 10) + digit;
+    ulto = ulto * 10 + digit;
     num ~/= 10;
   }
 
-  if (og == reversed) {
-    print("$og is Palindrome");
+  if (orig == ulto) {
+    print("$orig is a palindrome");
   } else {
-    print("$og is Not Palindrome");
+    print("$orig is not a palindrome");
   }
 }
